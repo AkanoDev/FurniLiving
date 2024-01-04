@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Content from "./components/Content";
+import Navbar from "./components/Navbar";
+import BestSelling from "./components/BestSelling";
+import Category from "./components/Catergory";
+import MenuCategory from "./pages/categories/MenuCategory";
+import BedRoom from "./pages/categories/BedRoom";
+import LivingRoom from "./pages/categories/LivingRoom";
+import OfficeRoom from "./pages/categories/OfficeRoom";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar />
+                <Content />
+                <BestSelling />
+                <Category />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/menucategory" element={<MenuCategory />} />
+          <Route path="/livingroom" element={<LivingRoom />} />
+          <Route path="/bedroom" element={<BedRoom />} />
+          <Route path="/office" element={<OfficeRoom />} />
+          <Route path="/kitchen" element={<LivingRoom />} />
+          <Route path="/shelves" element={<LivingRoom />} />
+          <Route path="/benches" element={<LivingRoom />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;
