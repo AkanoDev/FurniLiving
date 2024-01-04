@@ -7,7 +7,10 @@ import MenuCategory from "./pages/categories/MenuCategory";
 import BedRoom from "./pages/categories/BedRoom";
 import LivingRoom from "./pages/categories/LivingRoom";
 import OfficeRoom from "./pages/categories/OfficeRoom";
+import KitchenRoom from "./pages/categories/KitchenRoom";
 import Footer from "./components/Footer";
+import StorageRoom from "./pages/categories/StorageRoom";
+import Benches from "./pages/categories/Benches";
 
 export default function App() {
   return (
@@ -30,9 +33,9 @@ export default function App() {
           <Route path="/livingroom" element={<LivingRoom />} />
           <Route path="/bedroom" element={<BedRoom />} />
           <Route path="/office" element={<OfficeRoom />} />
-          <Route path="/kitchen" element={<LivingRoom />} />
-          <Route path="/shelves" element={<LivingRoom />} />
-          <Route path="/benches" element={<LivingRoom />} />
+          <Route path="/kitchen" element={<KitchenRoom />} />
+          <Route path="/shelves" element={<StorageRoom />} />
+          <Route path="/benches" element={<Benches />} />
         </Routes>
       </BrowserRouter>
     </div>

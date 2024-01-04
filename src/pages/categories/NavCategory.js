@@ -34,9 +34,7 @@ function NavCategory() {
             </NavCategoryList>
           </Link>
           <Link to="/Kitchen">
-            <NavCategoryList className="px-3 py-2">
-              Kitchen Cabinet
-            </NavCategoryList>
+            <NavCategoryList className="px-3 py-2">Kitchen</NavCategoryList>
           </Link>
           <Link to="/shelves">
             <NavCategoryList className="px-3 py-2">
@@ -76,9 +74,7 @@ function NavCategory() {
               </NavCategoryList>
             </Link>
             <Link to="/Kitchen">
-              <NavCategoryList className="px-3 py-2">
-                Kitchen Cabinet
-              </NavCategoryList>
+              <NavCategoryList className="px-3 py-2">Kitchen</NavCategoryList>
             </Link>
             <Link to="/shelves">
               <NavCategoryList className="px-3 py-2">

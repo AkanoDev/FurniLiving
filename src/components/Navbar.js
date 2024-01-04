@@ -15,30 +15,31 @@ function Navbar() {
     alert("Unavailable\nOn work progress. Thanks!");
   }
   return (
-    <header className="h-16 w-screen flex justify-between items-center lg:px-24 px-10 cursor-pointer">
+    <header className="flex items-center justify-between lg:px-20 px-5 h-16">
       <h2 className="text-2xl">Furniliving</h2>
-      <nav>
-        <ul className="lg:flex hidden gap-5">
+      <nav className="flex items-center gap-5">
+        <ul className="lg:flex hidden gap-5 items-center">
           <a href="#/">
             <NavbarList className="px-3 py-2">Home</NavbarList>
           </a>
           <a href="#product">
             <NavbarList className="px-3 py-2">Products</NavbarList>
           </a>
-          <a href="#about">
+          {/* <a href="#about">
             <NavbarList className="px-3 py-2">About</NavbarList>
-          </a>
+          </a> */}
           <a href="#contact">
             <NavbarList className="px-3 py-2">Contact</NavbarList>
           </a>
+
+          <div className="lg:flex lg:items-center hidden gap-4">
+            <IoCartOutline className="text-xl" onClick={addToCart} />
+            <FaUserCircle className="text-2xl" onClick={addToCart} />
+          </div>
         </ul>
       </nav>
-      <div className="lg:flex items-center hidden gap-4">
-        <IoCartOutline className="text-xl" onClick={addToCart} />
-        <FaUserCircle className="text-2xl" />
-      </div>
 
-      <div className="flex justify-start lg:hidden ">
+      <div className="lg:hidden block">
         {showNav ? (
           <RxCross1 className="text-2xl" onClick={onToggleShow} />
         ) : (
@@ -52,9 +53,9 @@ function Navbar() {
             <a href="#product">
               <NavbarList className="px-3 py-2">Products</NavbarList>
             </a>
-            <a href="#about">
+            {/* <a href="#about">
               <NavbarList className="px-3 py-2">About</NavbarList>
-            </a>
+            </a> */}
             <a href="#contact">
               <NavbarList className="px-3 py-2">Contact</NavbarList>
             </a>

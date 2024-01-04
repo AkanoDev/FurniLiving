@@ -1,15 +1,46 @@
-import NavCategory from "./NavCategory";
-import { features } from "../../datas/features";
 import { useState } from "react";
+import NavCategory from "./NavCategory";
 
-function MenuCategory() {
+export const kitchencategory = [
+  {
+    id: 1,
+    image: "./images/kitchen/damiana-dining-set.jpg",
+    name: "damiana dining set",
+    price: 599,
+  },
+  {
+    id: 2,
+    image: "./images/kitchen/damien-minipub-set.jpg",
+    name: "damien minipub set",
+    price: 599,
+  },
+  {
+    id: 3,
+    image: "./images/kitchen/darrel-dining-set.jpg",
+    name: "darrel dining set",
+    price: 599,
+  },
+  {
+    id: 4,
+    image: "./images/kitchen/deidra-dining-set.jpg",
+    name: "deidra dining set",
+    price: 599,
+  },
+  {
+    id: 5,
+    image: "./images/kitchen/kyrie-kitchen-table.jpg",
+    name: "kyrie kitchen table",
+    price: 599,
+  },
+];
+function KitchenRoom() {
   return (
     <div className="h-auto flex flex-col items-center gap-16">
       <NavCategory />
-      <div className="w-4/5 px-12">
+      <div className="w-4/5 px-14">
         <ul className="flex flex-wrap justify-center gap-16 pb-10">
-          {features.map((category) => (
-            <MenuCategoryList category={category} key={category.name} />
+          {kitchencategory.map((category) => (
+            <KitchenRoomList category={category} key={category.name} />
           ))}
         </ul>
       </div>
@@ -17,7 +48,7 @@ function MenuCategory() {
   );
 }
 
-function MenuCategoryList({ category }) {
+function KitchenRoomList({ category }) {
   const [showButtons, setShowButtons] = useState(false);
 
   function handleShowButtons() {
@@ -55,4 +86,4 @@ function MenuCategoryList({ category }) {
   );
 }
 
-export default MenuCategory;
+export default KitchenRoom;

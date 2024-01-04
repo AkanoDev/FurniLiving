@@ -1,15 +1,46 @@
-import NavCategory from "./NavCategory";
-import { features } from "../../datas/features";
 import { useState } from "react";
+import NavCategory from "./NavCategory";
 
-function MenuCategory() {
+export const storagecategory = [
+  {
+    id: 1,
+    image: "./images/storage/acadia-square-box.jpg",
+    name: "acadia square box",
+    price: 599,
+  },
+  {
+    id: 2,
+    image: "./images/storage/alexis-basket-set.jpg",
+    name: "alexis basket set",
+    price: 599,
+  },
+  {
+    id: 3,
+    image: "./images/storage/raizen-divider.jpg",
+    name: "raizen divider",
+    price: 599,
+  },
+  {
+    id: 4,
+    image: "./images/storage/ralston-multipurpose-rack.jpg",
+    name: "ralston multipurpose rack",
+    price: 599,
+  },
+  {
+    id: 5,
+    image: "./images/storage/rohan-shoe-cabinet.jpg",
+    name: "rohan shoe cabinet",
+    price: 599,
+  },
+];
+function StorageRoom() {
   return (
     <div className="h-auto flex flex-col items-center gap-16">
       <NavCategory />
       <div className="w-4/5 px-12">
         <ul className="flex flex-wrap justify-center gap-16 pb-10">
-          {features.map((category) => (
-            <MenuCategoryList category={category} key={category.name} />
+          {storagecategory.map((category) => (
+            <StorageRoomList category={category} key={category.name} />
           ))}
         </ul>
       </div>
@@ -17,7 +48,7 @@ function MenuCategory() {
   );
 }
 
-function MenuCategoryList({ category }) {
+function StorageRoomList({ category }) {
   const [showButtons, setShowButtons] = useState(false);
 
   function handleShowButtons() {
@@ -35,6 +66,7 @@ function MenuCategoryList({ category }) {
         alt={category.name}
         className="object-cover h-40 w-40"
       />
+
       {showButtons && (
         <div
           className="bg-light-pink px-5 absolute bottom-10 h-20 w-full flex flex-col justify-center gap-1"
@@ -55,4 +87,4 @@ function MenuCategoryList({ category }) {
   );
 }
 
-export default MenuCategory;
+export default StorageRoom;
