@@ -13,7 +13,7 @@ function Navbar() {
   }
 
   function addToCart() {
-    alert("Unavailable\nOn work progress. Thanks!");
+    alert("Unavailable\nOn work progress. Thanks!!!");
   }
   return (
     <header className="h-16 w-screen flex justify-between items-center lg:px-24 px-10 cursor-pointer">
