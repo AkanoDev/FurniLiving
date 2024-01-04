@@ -1,6 +1,5 @@
 import { IoCartOutline } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { RxCross1 } from "react-icons/rx";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
