@@ -12,6 +12,11 @@ import Footer from "./components/Footer";
 import StorageRoom from "./pages/categories/StorageRoom";
 import Benches from "./pages/categories/Benches";
 
+const ScrollToTop = () => {
+  window.scrollTo(0, 0);
+  return null;
+};
+
 export default function App() {
   return (
     <div>

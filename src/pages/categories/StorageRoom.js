@@ -1,45 +1,18 @@
 import { useState } from "react";
 import NavCategory from "./NavCategory";
+import { features } from "../../datas/features";
 
-export const storagecategory = [
-  {
-    id: 1,
-    image: "./images/storage/acadia-square-box.jpg",
-    name: "acadia square box",
-    price: 599,
-  },
-  {
-    id: 2,
-    image: "./images/storage/alexis-basket-set.jpg",
-    name: "alexis basket set",
-    price: 599,
-  },
-  {
-    id: 3,
-    image: "./images/storage/raizen-divider.jpg",
-    name: "raizen divider",
-    price: 599,
-  },
-  {
-    id: 4,
-    image: "./images/storage/ralston-multipurpose-rack.jpg",
-    name: "ralston multipurpose rack",
-    price: 599,
-  },
-  {
-    id: 5,
-    image: "./images/storage/rohan-shoe-cabinet.jpg",
-    name: "rohan shoe cabinet",
-    price: 599,
-  },
-];
 function StorageRoom() {
+  const storageItem = features.filter(
+    (item) => item.category === "storageroom"
+  );
+
   return (
     <div className="h-auto flex flex-col items-center gap-16">
       <NavCategory />
       <div className="w-4/5 px-12">
         <ul className="flex flex-wrap justify-center gap-16 pb-10">
-          {storagecategory.map((category) => (
+          {storageItem.map((category) => (
             <StorageRoomList category={category} key={category.name} />
           ))}
         </ul>

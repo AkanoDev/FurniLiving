@@ -23,6 +23,7 @@ function MenuCategoryList({ category }) {
   function handleShowButtons() {
     setShowButtons((show) => !show);
   }
+
   return (
     <li
       className="flex flex-col items-center relative cursor-pointer"

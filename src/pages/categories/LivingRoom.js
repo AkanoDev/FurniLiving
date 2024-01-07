@@ -1,39 +1,16 @@
 import { useState } from "react";
 import NavCategory from "./NavCategory";
+import { features } from "../../datas/features";
 
-export const livingroom = [
-  {
-    id: 1,
-    image: "./images/livingroom/ezeck-tv-cabinet.jpg",
-    name: "ezeck tv cabinet",
-    price: 599,
-  },
-  {
-    id: 2,
-    image: "./images/livingroom/osmund-ottoman.jpg",
-    name: "osmund ottoman",
-    price: 599,
-  },
-  {
-    id: 3,
-    image: "./images/livingroom/sterling-recliner-sofa.jpg",
-    name: "sterling recliner sofa",
-    price: 599,
-  },
-  {
-    id: 4,
-    image: "./images/livingroom/teemo-side-table.jpg",
-    name: "teemo sidetable",
-    price: 599,
-  },
-];
 function LivingRoom() {
+  const livingItem = features.filter((item) => item.category === "livingroom");
+
   return (
     <div className="h-auto flex flex-col items-center gap-16">
       <NavCategory />
       <div className="w-4/5 px-12">
         <ul className="flex flex-wrap justify-center gap-16 pb-10">
-          {livingroom.map((category) => (
+          {livingItem.map((category) => (
             <LivingRoomList category={category} key={category.name} />
           ))}
         </ul>

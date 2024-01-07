@@ -1,51 +1,16 @@
 import { useState } from "react";
 import NavCategory from "./NavCategory";
+import { features } from "../../datas/features";
 
-export const bedcategory = [
-  {
-    id: 1,
-    image: "./images/bedroom/belaine.jpg",
-    name: "belaine bed",
-    price: 599,
-  },
-  {
-    id: 2,
-    image: "./images/bedroom/braxton.jpg",
-    name: "braxton bed",
-    price: 599,
-  },
-  {
-    id: 3,
-    image: "./images/bedroom/ryland-standing-dresser.jpg",
-    name: "ryland standing dresser",
-    price: 599,
-  },
-  {
-    id: 4,
-    image: "./images/bedroom/seth-sofa-bed.jpg",
-    name: "seth sofa bed",
-    price: 599,
-  },
-  {
-    id: 5,
-    image: "./images/bedroom/nina-bed-side.jpg",
-    name: "nina bed side",
-    price: 599,
-  },
-  {
-    id: 6,
-    image: "./images/bedroom/winzel-closed.jpg",
-    name: "winzel closed",
-    price: 599,
-  },
-];
 function BedRoom() {
+  const bedItems = features.filter((item) => item.category === "bedroom");
+
   return (
     <div className="h-auto flex flex-col items-center gap-16">
       <NavCategory />
       <div className="w-4/5 px-12">
         <ul className="flex flex-wrap justify-center gap-16 pb-10">
-          {bedcategory.map((category) => (
+          {bedItems.map((category) => (
             <BedRoomList category={category} key={category.name} />
           ))}
         </ul>
